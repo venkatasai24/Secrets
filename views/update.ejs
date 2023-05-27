@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div class="container">
+    <div class="jumbotron centered">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 class="display-3">Secrets</h1>
+    <p class="secret-text">Don't keep your secrets, share them Anonymously!</p>
+
+    <form action="/update" method="POST">
+
+        <div class="form-group">
+        <input type="text" class="form-control text-center" name="secret" value="<%=message.secret%>">
+        <input type="hidden" name="id" value="<%=message.id%>">
+        <input type="hidden" name="prevsecret" value="<%=message.secret%>">
+        </div>
+        <button type="submit" class="btn btn-dark">Update</button>
+    </form>
+
+
+    </div>
+</div>
+<%- include('partials/footer') %>
