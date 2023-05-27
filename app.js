@@ -33,7 +33,7 @@ app.use(passport.initialize())
 
 app.use(passport.session())
 
-mongoose.connect("mongodb+srv://venkatasai24042004:PlBtdPBaTwUugI4S@cluster0.s6se6mz.mongodb.net/secretsDB",{useNewUrlParser:true})
+mongoose.connect(process.env.DATABASE,{useNewUrlParser:true})
 .then(()=>{console.log("mongodb server connected")})
 .catch((err)=>{console.log(err)})
 
